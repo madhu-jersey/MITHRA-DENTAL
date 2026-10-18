@@ -1,0 +1,44 @@
+{
+  "_readme": "Google review snapshot. Update these values from the live Google Business listing, then run: node src/build.mjs. Only add reviews that appear on the listing, copied exactly. Show reviewer names as initials only. 'time' is the relative time as Google showed it on 'capturedOn'.",
+  "listingName": "SREE MITHRA DENTAL SPECIALISTS",
+  "capturedOn": "2026-10-17",
+  "capturedOnLabel": "17 Oct 2026",
+  "breakdown": {
+    "_note": "total and average from the Google listing. counts = number of reviews per star rating. CURRENT COUNTS ARE ESTIMATES (set 18 Oct 2026): replace with the exact counts from the Google listing. null = not entered (bar stays empty and shows a dash). Bar width = count / largest count.",
+    "total": 52,
+    "average": 4.9,
+    "counts": {
+      "5": 45,
+      "4": 7,
+      "3": 0,
+      "2": 0,
+      "1": 0
+    }
+  },
+  "reviewsUrl": "https://www.google.com/maps/place/SREE+MITHRA+DENTAL+SPECIALISTS/@16.7517297,81.6838545,17z/data=!4m8!3m7!1s0x3a37b7fa0d0de735:0x3787843e081afac6!8m2!3d16.7517246!4d81.6864294!9m1!1b1!16s%2Fg%2F11c6dcl9dq",
+  "directionsUrl": "https://www.google.com/maps/place/SREE+MITHRA+DENTAL+SPECIALISTS/@16.7517297,81.6838545,17z/data=!3m1!4b1!4m6!3m5!1s0x3a37b7fa0d0de735:0x3787843e081afac6!8m2!3d16.7517246!4d81.6864294!16s%2Fg%2F11c6dcl9dq",
+  "_mapNote": "Google Maps place links cannot be shown inside an iframe, so the map uses Google's embed form of the same place (name + coordinates from the listing). To use Google's own embed code instead: Google Maps > Share > Embed a map > copy the src URL here.",
+  "mapEmbedUrl": "https://maps.google.com/maps?q=SREE%20MITHRA%20DENTAL%20SPECIALISTS%4016.7517246%2C81.6864294&z=17&hl=en&output=embed",
+  "mapPlaceUrl": "https://www.google.com/maps/place/SREE+MITHRA+DENTAL+SPECIALISTS/@16.7517297,81.6838545,17z/data=!4m16!1m9!3m8!1s0x3a37b7fa0d0de735:0x3787843e081afac6!2sSREE+MITHRA+DENTAL+SPECIALISTS!8m2!3d16.7517246!4d81.6864294!9m1!1b1!16s%2Fg%2F11c6dcl9dq!3m5!1s0x3a37b7fa0d0de735:0x3787843e081afac6!8m2!3d16.7517246!4d81.6864294!16s%2Fg%2F11c6dcl9dq",
+  "autoAdvance": false,
+  "reviews": [
+    {
+      "stars": 5,
+      "time": "3 weeks ago",
+      "initials": "P. D.",
+      "text": "Good treatment, I got my 3 wisdom teeth removed and cured in just a very short span would definitely recommend"
+    },
+    {
+      "stars": 5,
+      "time": "Edited a month ago",
+      "initials": "S.",
+      "text": "I am currently undergoing braces treatment at Sree Mithra Dental Specialists, and my experience has been excellent. My orthodontist visits from Bangalore to provide treatment at this clinic, and I am very satisfied with the care. The doctor is highly skilled, explains every procedure clearly, and is very patient. The clinic is clean, well-maintained, and the staff is friendly and supportive. Appointments are well organized, and I feel confident about my treatment. I highly recommend Sree Mithra Dental Specialists for quality dental care and orthodontic (braces) treatment."
+    },
+    {
+      "stars": 5,
+      "time": "10 months ago",
+      "initials": "J.",
+      "text": "Quick service and very trustworthy"
+    }
+  ]
+}

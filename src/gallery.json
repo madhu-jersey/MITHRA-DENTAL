@@ -1,0 +1,16 @@
+{
+  "_readme": "Clinic gallery. To add a photo: put the file (JPG, PNG or WebP, at least 800px wide) in assets/img/gallery/, set its path as 'src' below, then run: node src/optimize-gallery.mjs && node src/build.mjs. 'focus' sets which part stays visible when the photo is cropped to 4:3 (CSS object-position, e.g. 'center', 'top', 'left 30%'). Leave 'src' as null to show a placeholder tile. The first 5 photos show by default; the rest appear with 'View more photos'.",
+  "minWidth": 800,
+  "initialCount": 5,
+  "photos": [
+    { "src": null, "alt": "Reception desk at Sree Mithra, Tanuku", "caption": "Reception", "focus": "center" },
+    { "src": null, "alt": "Treatment room with dental chair", "caption": "Treatment room", "focus": "center" },
+    { "src": null, "alt": "Sterilisation area", "caption": "Sterilisation", "focus": "center" },
+    { "src": null, "alt": "Outside the clinic, Sree Satya Plaza, Velpur Rd", "caption": "Clinic exterior", "focus": "center" },
+    { "src": null, "alt": "Patient waiting area", "caption": "Waiting area", "focus": "center" },
+    { "src": null, "alt": "Consultation room", "caption": "Consultation room", "focus": "center" },
+    { "src": null, "alt": "Clinic entrance", "caption": "Clinic entrance", "focus": "center" },
+    { "src": null, "alt": "Dental treatment chair", "caption": "Treatment chair", "focus": "center" },
+    { "src": null, "alt": "Sree Mithra clinic signboard", "caption": "Clinic signboard", "focus": "center" }
+  ]
+}
