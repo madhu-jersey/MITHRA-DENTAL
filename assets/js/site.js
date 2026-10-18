@@ -67,7 +67,8 @@
     }
 
     // Page transition for internal page links
-    if (reduceMotion || a.target === "_blank" || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+    // Browsers with cross-page view transitions crossfade on their own (see site.css), so no delay here
+    if (reduceMotion || doc.documentElement.classList.contains("vt") || a.target === "_blank" || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
     if (/^(tel:|mailto:|https?:)/.test(href) || a.hasAttribute("download")) return;
     e.preventDefault();
     doc.body.classList.add("is-leaving");
@@ -205,7 +206,20 @@
      Hero entrance
   ------------------------------------------------------------------ */
   var hero = $(".hero");
-  if (hero) requestAnimationFrame(function () { requestAnimationFrame(function () { hero.classList.add("is-in"); }); });
+  function heroIn() { requestAnimationFrame(function () { requestAnimationFrame(function () { hero.classList.add("is-in"); }); }); }
+  // A page loaded ahead in the background waits until it is actually shown
+  if (hero) { if (doc.prerendering) doc.addEventListener("prerenderingchange", heroIn, { once: true }); else heroIn(); }
+
+  /* Service cards: a click anywhere on the card opens the service page (the Book button keeps its own action) */
+  $$(".scard").forEach(function (card) {
+    var link = card.querySelector(".link-arrow");
+    if (!link) return;
+    card.classList.add("is-linked");
+    card.addEventListener("click", function (e) {
+      if (e.target.closest("a, button") || (window.getSelection && String(window.getSelection()).length)) return;
+      link.click();
+    });
+  });
 
   /* ------------------------------------------------------------------
      Scroll reveal (stagger via data-stagger on the parent)

@@ -1731,3 +1731,225 @@ body { font-size: 17.5px; letter-spacing: 0.002em; }
   .mbar { transition: transform .25s var(--ease), opacity .25s var(--ease); }
   .at-submit .mbar { transform: translateY(110%); opacity: 0; pointer-events: none; }
 }
+
+/* =====================================================================
+   Compact scale (Oct 2026): every section one step lighter.
+   Smaller section padding, headings, cards and form controls.
+   Placed last so it overrides the earlier sizes in one place.
+   ===================================================================== */
+:root { --section-y: clamp(52px, 6vw, 88px); --radius-lg: 24px; }
+body { font-size: 16.5px; }
+@media (max-width: 767px) { body { font-size: 16px; } }
+
+/* Section headings and buttons */
+.eyebrow { font-size: 11.5px; margin-bottom: 12px; }
+.section-title { font-size: clamp(28px, 3.2vw, 40px); }
+.section-intro { margin-top: 12px; font-size: 16.5px; }
+.section-head { margin-bottom: clamp(28px, 3.4vw, 44px); }
+.btn { min-height: 46px; padding: 11px 22px; font-size: 15.5px; }
+
+/* Hero */
+.hero { padding: clamp(40px, 5vw, 72px) 0 clamp(56px, 6vw, 88px); }
+.hero__title { margin-top: 20px; font-size: clamp(36px, 3.7vw, 56px); }
+.hero__sub { margin-top: 18px; font-size: 17px; max-width: 500px; }
+.hero__actions { margin-top: 26px; }
+
+/* About */
+.about { gap: clamp(28px, 4.5vw, 64px); }
+.ab-plate { min-height: 440px; padding: clamp(26px, 3vw, 38px); }
+.ab-plate__name { font-size: 24px; }
+.ab-plate__mark { width: 50px; height: 50px; font-size: 22px; }
+.ab-facts { padding-top: 28px; }
+.ab-facts > div { padding: 12px 0; }
+.ab-facts dd { font-size: 42px; }
+.ab-facts dt { font-size: 15px; }
+.about__lead { margin-top: 16px; font-size: 18px; }
+.about__text p { font-size: 16.5px; }
+.ab-points { margin: 22px 0 26px; gap: 0 28px; }
+.ab-points li { padding: 13px 0; gap: 12px; }
+.ab-points__icon { width: 36px; height: 36px; }
+.ab-points li > div { padding-top: 4px; }
+.ab-points strong { font-size: 16px; }
+.ab-points li > div > span { font-size: 14px; }
+
+/* Why choose us */
+.why__col { padding-top: 24px; }
+.why__col h3 { font-size: 19px; margin-top: 16px; }
+.why__col p { margin-top: 8px; font-size: 15px; }
+
+/* Services */
+.services-grid { gap: 18px; }
+.scard { padding: 24px 22px 20px; }
+.scard__num { font-size: 36px; top: 16px; right: 20px; }
+.icon-box { width: 50px; height: 50px; border-radius: 14px; }
+.icon-box .icon { width: 25px; height: 25px; }
+.scard__title { margin-top: 16px; font-size: 20px; }
+.scard__sub { font-size: 14.5px; }
+.checks { gap: 8px; margin-top: 14px; }
+.checks li { font-size: 14.5px; }
+.checks .icon { width: 16px; height: 16px; }
+.scard__body { padding-bottom: 16px; }
+.scard__foot { padding-top: 14px; }
+
+/* Doctors */
+.doctors { gap: clamp(44px, 5.5vw, 72px); }
+.doc { grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); }
+.doc:nth-child(even) { grid-template-columns: minmax(0, 1fr) minmax(0, 360px); }
+.doc__photo { padding: 10px; }
+.doc__photo .ph { aspect-ratio: 4 / 4.5; }
+.doc__name { font-size: clamp(25px, 2.6vw, 32px); }
+.doc__deg { font-size: 15.5px; }
+.doc__list-title { font-size: 16px; }
+.doc__list { margin: 8px 0 20px; }
+.doc__list li { padding: 9px 0; font-size: 15.5px; }
+.doc__meta { margin-bottom: 18px; }
+
+/* Gallery */
+.ggrid { gap: 14px; }
+
+/* Reviews */
+.rv-overview { padding: clamp(20px, 3vw, 34px); margin-bottom: clamp(28px, 3.5vw, 40px); gap: clamp(20px, 3vw, 44px); }
+.rv-score { font-size: clamp(48px, 5vw, 60px); }
+.rv-stars .icon { width: 20px; height: 20px; }
+.rv-bar__track { height: 8px; }
+.rcard { padding: 20px; gap: 12px; }
+.rcard__text { font-size: 15px; }
+.rcard .avatar { width: 38px; height: 38px; }
+.rv-actions { margin-top: 24px; }
+
+/* Contact */
+.contact { gap: 22px; }
+.ccard__call { padding: 20px clamp(20px, 2.6vw, 28px); }
+.ccard__call-num { font-size: clamp(24px, 2.4vw, 30px); }
+.ccard__body { padding: 4px clamp(20px, 2.6vw, 28px) clamp(20px, 2.6vw, 26px); }
+.ccard__row { padding: 16px 0; gap: 14px; }
+.ccard__icon { width: 36px; height: 36px; }
+.ccard__addr { font-size: 15.5px; }
+.ccard__hours > div { padding: 4px 10px; font-size: 15px; }
+.ccard__actions { padding-top: 18px; }
+.map__frame { min-height: 320px; padding: 8px; }
+.map__embed { min-height: 300px; }
+
+/* FAQ */
+.faq { gap: clamp(28px, 4.5vw, 64px); }
+.acc { gap: 10px; }
+.acc__btn { padding: 14px 18px; min-height: 54px; font-size: 16.5px; }
+.acc__chev { width: 32px; height: 32px; }
+.acc__panel p { padding: 0 18px 18px; font-size: 15.5px; }
+
+/* Booking */
+.bk { padding-top: clamp(44px, 5vw, 72px); padding-bottom: clamp(44px, 5vw, 72px); }
+.bk__shell { border-radius: 24px; grid-template-columns: minmax(0, .56fr) minmax(0, 1.44fr); }
+.bk__panel { padding: clamp(22px, 2.6vw, 32px); }
+.bk__title { font-size: clamp(26px, 2.4vw, 32px); }
+.bk__lede { margin-top: 10px; font-size: 15px; }
+.bk__steps { margin-top: 20px; }
+.bk__steps li { gap: 12px; padding-bottom: 12px; }
+.bk__n { width: 28px; height: 28px; font-size: 12.5px; }
+.bk__steps li:not(:last-child)::before { left: 13px; top: 30px; }
+.bk__steps p { font-size: 13.5px; padding-top: 2px; }
+.bk__steps strong { font-size: 14.5px; }
+.bk__call { padding: 12px 14px; border-radius: 16px; }
+.bk__tel { font-size: 19px; gap: 10px; }
+.bk__tel-icon { width: 36px; height: 36px; }
+.bk__hours { font-size: 12.5px; }
+.bk__formwrap { padding: clamp(20px, 2.6vw, 30px); }
+.bk__formhead { margin-bottom: 14px; }
+.bk__formtitle { font-size: 18px; }
+.bk-step { margin-bottom: 16px; gap: 12px; }
+.bk-step + .bk-step { padding-top: 16px; }
+.bk-step__title { font-size: 15.5px; margin-bottom: 4px; gap: 8px; }
+.bk-step__n { width: 22px; height: 22px; font-size: 11.5px; }
+.bk .field { gap: 5px; }
+.bk .field label, .bk .label { font-size: 13px; }
+.bk__grid { gap: 12px; }
+.bk__input .input { min-height: 44px; padding-top: 8px; padding-bottom: 8px; font-size: 14.5px; }
+.bk-period__card { min-height: 54px; padding: 8px 12px; gap: 10px; }
+.bk-period__icon { width: 32px; height: 32px; }
+.bk-period__icon .icon { width: 17px; height: 17px; }
+.bk-period__text strong { font-size: 14.5px; }
+.bk-period__text small { font-size: 12.5px; }
+.bk-slots__empty { min-height: 44px; padding: 10px 14px; font-size: 14px; }
+.bk__chip span { min-height: 38px; padding: 6px 13px 6px 10px; font-size: 13.5px; }
+.bk__chip .icon { width: 15px; height: 15px; }
+.bk textarea.input, .bk-step textarea.input { min-height: 44px; font-size: 14.5px; }
+.bk__btn { min-height: 48px; }
+
+/* Service pages */
+.crumbs { padding: 6px 0; font-size: 13.5px; }
+.shero .hero__title { font-size: clamp(36px, 4.4vw, 56px); }
+.shero .disclaimer { margin-top: 22px; }
+.disclaimer { padding: 11px 15px; font-size: 13.5px; }
+.ph--shero { aspect-ratio: 4 / 3.3; }
+.problems { gap: 16px; }
+.pcard { padding: 22px; }
+.pcard h3 { font-size: 18px; margin-top: 14px; }
+.pcard p { font-size: 15px; }
+.alt { gap: clamp(24px, 3vw, 36px); }
+.alt__row { gap: clamp(22px, 4vw, 56px); }
+.alt__label { font-size: 44px; }
+.alt__row h3 { font-size: clamp(20px, 2vw, 24px); }
+.causes li { padding: 15px 0; grid-template-columns: 52px 1fr; }
+.causes li::before { font-size: 17px; }
+.causes span { font-size: clamp(17px, 1.7vw, 20px); }
+.causes-wrap { gap: clamp(28px, 4.5vw, 64px); }
+.solutions { gap: 16px; }
+.solcard { padding: 22px; gap: 12px; }
+.solcard h3 { font-size: 19px; }
+.solcard dd { font-size: 15px; }
+.expect { gap: 22px; }
+.expect::before, .expect::after { top: 25px; }
+.expect__n { width: 52px; height: 52px; font-size: 17px; }
+.expect__step h3 { font-size: 19px; margin-top: 16px; }
+.expect__step p { font-size: 15px; }
+.firststeps { margin-top: 28px; }
+.firststeps h3 { font-size: 19px; }
+.band h2 { font-size: clamp(26px, 3.2vw, 38px); }
+.band__inner { padding-top: clamp(40px, 5vw, 64px); padding-bottom: clamp(40px, 5vw, 64px); }
+
+/* Footer */
+.footer__bottom { margin-top: 40px; }
+
+/* Whole service card opens its page */
+.scard.is-linked { cursor: pointer; }
+
+/* Moving between pages: browsers with cross-page view transitions crossfade the old page into the new one,
+   with no blank frame. Others keep the older fade (pageFade / is-leaving above). */
+@view-transition { navigation: auto; }
+.vt.js body, .vt.js #main { animation: none; }
+::view-transition-old(root) { animation: vtOut .2s var(--ease) both; }
+::view-transition-new(root) { animation: vtIn .36s var(--ease-out-expo) both; }
+@keyframes vtOut { to { opacity: 0; } }
+@keyframes vtIn { from { opacity: 0; transform: translateY(10px); } }
+
+/* Service page hero: arrives as one quick movement, not a long cascade */
+.js .shero [data-hero] { transform: translateY(10px); }
+.js .shero.is-in [data-hero] { transition-duration: .5s; }
+.js .shero.is-in .line > span { transition-duration: .55s; }
+.js .shero [data-hero="frame"] { transform: scale(.98) rotate(3deg); }
+.js .shero.is-in [data-hero="frame"] { transition-duration: .6s, .7s; }
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}
+
+/* Keep the tablet and phone layouts that the sizes above would otherwise undo */
+@media (max-width: 960px) {
+  .doc, .doc:nth-child(even) { grid-template-columns: 1fr; }
+  .doc__media { max-width: 400px; }
+  .bk__shell { grid-template-columns: 1fr; }
+  .bk__steps li { gap: 8px; padding-bottom: 0; }
+}
+@media (max-width: 767px) {
+  .ab-plate { min-height: 0; }
+  .expect { gap: 28px; }
+  .expect__step { grid-template-columns: 52px 1fr; gap: 0 16px; }
+  .expect::before, .expect::after { left: 25px; top: 26px; bottom: 26px; }
+  .causes li { grid-template-columns: 40px 1fr; }
+}
+@media (max-width: 600px) {
+  .ab-points { grid-template-columns: 1fr; }
+  .bk__steps li { padding-bottom: 10px; }
+  .bk__chip span { min-height: 44px; }
+}

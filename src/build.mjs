@@ -186,7 +186,10 @@ function layout({ title, description, base, current, body, extra = "" }) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <meta name="theme-color" content="#9E0B24">
-<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__smReady)document.documentElement.classList.remove("js")},3000);</script>
+<script>document.documentElement.classList.add("js");if(window.CSSViewTransitionRule)document.documentElement.classList.add("vt");setTimeout(function(){if(!window.__smReady)document.documentElement.classList.remove("js")},3000);</script>
+<!-- Browsers that support it load a service page in the background once the pointer rests on its link,
+     so opening it is near instant. Other pages are only fetched ahead. -->
+<script type="speculationrules">{"prerender":[{"where":{"selector_matches":"a[href*='services/']"},"eagerness":"moderate"}],"prefetch":[{"where":{"selector_matches":"a.logo, .nav a, .crumbs a"},"eagerness":"moderate"}]}</script>
 <!-- Type: Clash Display (headings) + General Sans (text), Fontshare, free for commercial use.
      Noto Sans Telugu covers Telugu text; Google only downloads it when Telugu characters appear. -->
 <link rel="icon" type="image/png" sizes="32x32" href="${base}assets/img/favicon-32.png">
@@ -893,23 +896,20 @@ function servicePage(s) {
   <div class="container hero__grid">
     <div class="hero__copy">
       <p class="eyebrow" data-hero style="--d:0ms">${s.name} care</p>
-      <h1 class="hero__title" id="hero-title" style="margin-top:4px"><span class="line line--2"><span style="--d:150ms">${s.name}</span></span></h1>
-      <p class="hero__sub" data-hero style="--d:380ms">${esc(s.sub)} ${esc(s.summary)}</p>
-      <div class="btn-row hero__actions" data-hero style="--d:520ms">
+      <h1 class="hero__title" id="hero-title" style="margin-top:4px"><span class="line line--2"><span style="--d:40ms">${s.name}</span></span></h1>
+      <p class="hero__sub" data-hero style="--d:110ms">${esc(s.sub)} ${esc(s.summary)}</p>
+      <div class="btn-row hero__actions" data-hero style="--d:170ms">
         <a class="btn btn--primary" ${bookAttrs(L, s.slug)}>Book Appointment${icon("arrow")}</a>
         <a class="btn btn--outline" href="${clinic.phoneHref}">${icon("phone")}Call Clinic</a>
       </div>
-      <p class="disclaimer" data-hero style="--d:660ms">${icon("info")}<span><strong>Draft content, pending doctor review.</strong> Information is general and not a substitute for consultation.</span></p>
+      <p class="disclaimer" data-hero style="--d:230ms">${icon("info")}<span><strong>Draft content, pending doctor review.</strong> Information is general and not a substitute for consultation.</span></p>
     </div>
     <div class="hero__visual">
       <div class="frame-parallax" data-parallax="22">
-        <div class="frame" data-hero="frame" style="--d:400ms">
+        <div class="frame" data-hero="frame" style="--d:90ms">
           ${ph(`${s.name} care at Sree Mithra`, "Photo to be supplied by client", "ph--shero", s.icon)}
         </div>
       </div>
-      <div class="badge badge--1 float" aria-hidden="true"><span class="badge__icon">${icon("steth")}</span><span>Specialist Care<small>${s.name}</small></span></div>
-      <div class="badge badge--2 float float--b" aria-hidden="true"><span class="badge__icon">${icon("pin")}</span><span>Tanuku Clinic<small>Velpur Rd</small></span></div>
-      <div class="badge-round float float--c" aria-hidden="true">${icon(s.icon)}</div>
     </div>
   </div>
 </section>
